@@ -5,8 +5,8 @@ return [
         [
             "component" => "text-field",
             "prefixComponent" => true,
-            "attribute" => "name",
-            "value" => 'name',
+            "attribute" => "full_name",
+            "value" => 'full_name',
             "panel" => null,
             "sortable" => false,
             "textAlign" => "left"
@@ -40,8 +40,8 @@ return [
         ]
     ],
     'validations' => [
-        'name' => 'required|string',
-        'email' => 'required|email',
+        'full_name' => 'required|string',
+        'email' => 'required|unique:users|email',
         'password' => 'nullable|string|confirmed'
     ],
 ];
